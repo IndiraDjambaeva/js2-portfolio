@@ -1,29 +1,41 @@
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+
 import "./navbar.scss";
 import menuIcon from "../../images/menu.svg";
 
 function Navbar() {
+  const [menuActive, setMenuActive] = useState(false);
+
+  const showMenu = () => {
+    setMenuActive(!menuActive);
+  }
+
+  //const menuItems = ["home", "about"]
+
   return (
     <nav className="navbar">
       <div className="container navbar__container">
-        <a href="/" className="navbar__logo">
+        <Link to="/" className="navbar__logo">
           Logo
-        </a>
-        <button className="navbar__toggle">
+        </Link>
+        <button onClick={showMenu} className="navbar__toggle">
           <img src={menuIcon} alt="kjkj" />
         </button>
-        <div className="navbar__menu--show">
-          <a href="/" className="navbar__menu-link">
+
+        <div className={menuActive ? "navbar__menu navbar__menu--show" : "navbar__menu"}>
+          <NavLink onClick={showMenu} to="/" className="navbar__menu-link">
             About us
-          </a>
-          <a href="/" className="navbar__menu-link">
+          </NavLink>
+          <NavLink onClick={showMenu} to="/services" className="navbar__menu-link">
             Services
-          </a>
-          <a href="/" className="navbar__menu-link">
+          </NavLink>
+          <NavLink onClick={showMenu} to="/portfolio" className="navbar__menu-link">
             Portfolio
-          </a>
-          <a href="/" className="navbar__menu-link">
+          </NavLink>
+          <NavLink onClick={showMenu} to="/contact" className="navbar__menu-link">
             Contacts
-          </a>
+          </NavLink>
         </div>
       </div>
     </nav>

@@ -13,6 +13,7 @@
     color: #a2ed77;
     text-transform: uppercase;
     font-weight: 700;
+
   }
 
   &__toggle {
@@ -23,10 +24,17 @@
     display: flex;
     align-items: center;
     gap: 30px;
+  }
 
-    &__menu-link {
-      color: #fff;
-      transition: 0.2s ease;
+  &__menu-link {
+    color: #fff;
+    transition: 0.2s ease;
+    gap: 10px;
+   
+
+    &:active,
+    &:hover {
+      color: #a2ed77;
     }
   }
 }
