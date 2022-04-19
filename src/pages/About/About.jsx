@@ -1,4 +1,5 @@
 import React from "react";
+import "./about.scss";
 import Usercard from "../../components/Usercard/Usercard";
 
 function About() {
@@ -25,19 +26,17 @@ function About() {
     <section className="about">
       <div className="container">
         <h1>About us. It's Interesting</h1>
+        <h2>This page will be redeveloped soon</h2>
         <h3>Our Users</h3>
-
-        <div className="container">
-          {users.map((user, idx) => {
-            return (
-              <Usercard
-                userName={user.name}
-                userAge={user.age}
-                key={`${idx}-${user.name}`}
-              />
-            );
-          })}
-        </div>
+        {users.map((user, idx) => {
+          return (
+            <Usercard
+              userName={user.name}
+              userAge={user.age}
+              key={`${idx}-${user.name}`}
+            />
+          );
+        })}
       </div>
     </section>
   );
