@@ -36,8 +36,9 @@ function About() {
             </span> */}
           </p>
           <p>
-            Head of PMO, Project, Program, Portfolio Manager, Product
-            Owner, Product Manager and learning Frontend React Developer with experience
+            Head of PMO, Project, Program, Portfolio Manager, 
+            {/* Product Owner, Product Manager  */}
+            and learning Frontend React Developer with experience
             in building the project management office from scratch, implementing
             banking products, construction projects, cash management, security,
             e-commerce, web development, mobile applications, etc. Experience in
