@@ -9,7 +9,30 @@ function Navbar() {
 
   const showMenu = () => {
     setMenuActive(!menuActive);
-  }
+  };
+
+  const menuItems = [
+    {
+      id: 1,
+      menu: "about",
+      link: "1",
+    },
+    {
+      id: 2,
+      menu: "services",
+      link: "services",
+    },
+    {
+      id: 3,
+      menu: "portfolio",
+      link: "portfolio",
+    },
+    {
+      id: 4,
+      menu: "contact",
+      link: "contact",
+    },
+  ];
 
   //const menuItems = ["home", "about"]
 
@@ -23,19 +46,23 @@ function Navbar() {
           <img src={menuIcon} alt="kjkj" />
         </button>
 
-        <div className={menuActive ? "navbar__menu navbar__menu--show" : "navbar__menu"}>
-          <NavLink onClick={showMenu} to="/" className="navbar__menu-link">
-            About us
-          </NavLink>
-          <NavLink onClick={showMenu} to="/services" className="navbar__menu-link">
-            Services
-          </NavLink>
-          <NavLink onClick={showMenu} to="/portfolio" className="navbar__menu-link">
-            Portfolio
-          </NavLink>
-          <NavLink onClick={showMenu} to="/contact" className="navbar__menu-link">
-            Contacts
-          </NavLink>
+        <div
+          className={
+            menuActive ? "navbar__menu navbar__menu--show" : "navbar__menu"
+          }
+        >
+          {menuItems.map((menuItem) => {
+            return (
+              <NavLink
+                onClick={showMenu}
+                to={menuItem.link}
+                className="navbar__menu-link"
+                key={menuItem.id}
+              >
+                {menuItem.menu}
+              </NavLink>
+            );
+          })}
         </div>
       </div>
     </nav>

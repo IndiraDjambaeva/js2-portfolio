@@ -1,42 +1,86 @@
-import React from "react";
+import { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+import { init } from "ityped";
+import Photo from "../../images/photo.jpg";
 import "./about.scss";
-import Usercard from "../../components/Usercard/Usercard";
 
 function About() {
-  const users = [
-    {
-      name: "John Doe",
-      age: 15,
-    },
-    {
-      name: "Pete Doe",
-      age: 20,
-    },
-    {
-      name: "Mariya Doe",
-      age: 26,
-    },
-    {
-      name: "Anna Doe",
-      age: 18,
-    },
-  ];
+  const animatedTextRef = useRef();
+
+  useEffect(() => {
+    init(animatedTextRef.current, {
+      showCursor: true,
+      strings: [
+        "Head of PMO, Project, Program, Portfolio Manager", 
+        "Frontend React Developer"],
+        //"Founder, Product Owner, Product Manager", "Frontend React Developer"],
+      backDelay:  1500,
+      backSpeed:  60,
+    });
+  }, []);
 
   return (
     <section className="about">
-      <div className="container">
-        <h1>About us. It's Interesting</h1>
-        <h2>This page will be redeveloped soon</h2>
-        <h3>Our Users</h3>
-        {users.map((user, idx) => {
-          return (
-            <Usercard
-              userName={user.name}
-              userAge={user.age}
-              key={`${idx}-${user.name}`}
-            />
-          );
-        })}
+      <div className="container about__container">
+        <div className="about__left">
+          <h1 className="about__title">Indira Djambaeva</h1>
+          <p className="about__subtitle">
+            <span ref={animatedTextRef} id="one">
+              {/* Head of PMO, Project, Program, Portfolio Manager, Product
+              Owner&Manager */}
+            </span>{" "}
+            {/* <br></br>
+            <span ref={animatedTextRef} id="two">
+              Frontend React Developer
+            </span> */}
+          </p>
+          <p>
+            Head of PMO, Project, Program, Portfolio Manager, Product
+            Owner, Product Manager and learning Frontend React Developer with experience
+            in building the project management office from scratch, implementing
+            banking products, construction projects, cash management, security,
+            e-commerce, web development, mobile applications, etc. Experience in
+            negotiating, coordinating issues with public and private
+            organizations.
+          </p>
+          <ul className="about__links">
+            <li className="home__links-item">
+              <a
+                href="https://fb.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebook className="about__icon" />
+              </a>
+            </li>
+            <li className="home__links-item">
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub className="about__icon" />
+              </a>
+            </li>
+            <li className="home__links-item">
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin className="about__icon" />
+              </a>
+            </li>
+          </ul>
+          <Link to="/contact" className="about__cta">
+            Let's cooperate
+          </Link>
+        </div>
+
+        <div className="about__right">
+          <img src={Photo} alt="Indira Djambaeva" />
+        </div>
       </div>
     </section>
   );

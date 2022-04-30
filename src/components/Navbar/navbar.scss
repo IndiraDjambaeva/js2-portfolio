@@ -10,7 +10,7 @@
   }
 
   &__logo {
-    color: #a2ed77;
+    color: rgb(230, 230, 78);
     text-transform: uppercase;
     font-weight: 700;
 
@@ -30,6 +30,7 @@
     color: #fff;
     transition: 0.2s ease;
     gap: 10px;
+    text-transform: capitalize;
    
 
     &:active,
