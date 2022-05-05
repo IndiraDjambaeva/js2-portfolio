@@ -23,13 +23,18 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    color: #013a80;
   }
 
   &__subtitle {
     margin: 0 0 15px;
     font-size: 1.2em;
     font-weight: 300;
+    color: rgb(172, 26, 33);
+   
   }
+
+  
 
   &__links {
     margin: 10px 0 25px;
@@ -52,7 +57,8 @@
 
   &__cta {
     display: inline-block;
-    background-color: rgb(46, 162, 197);
+    // background-color: rgb(46, 162, 197);
+    background-color: #004BA8;;
     padding: 10px 35px;
     border-radius: 6px;
     transition: 0.3s ease;
@@ -60,7 +66,8 @@
 
     &:hover {
       background-color: rgb(230, 230, 78);
-      color: rgb(46, 162, 197);
+      // color: rgb(46, 162, 197);
+      color: #004BA8;;
     }
   }
 

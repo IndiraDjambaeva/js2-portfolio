@@ -12,11 +12,12 @@ function About() {
     init(animatedTextRef.current, {
       showCursor: true,
       strings: [
-        "Head of PMO, Project, Program, Portfolio Manager", 
-        "Frontend React Developer"],
-        //"Founder, Product Owner, Product Manager", "Frontend React Developer"],
-      backDelay:  1500,
-      backSpeed:  60,
+        "Head of PMO, Project, Program, Portfolio Manager",
+        "Frontend React Developer",
+      ],
+      //"Founder, Product Owner, Product Manager", "Frontend React Developer"],
+      backDelay: 1500,
+      backSpeed: 60,
     });
   }, []);
 
@@ -36,11 +37,11 @@ function About() {
             </span> */}
           </p>
           <p>
-            Head of PMO, Project, Program, Portfolio Manager, 
+            Head of PMO, Project, Program, Portfolio Manager{" "}
             {/* Product Owner, Product Manager  */}
-            and learning Frontend React Developer with experience
-            in building the project management office from scratch, implementing
-            banking products, construction projects, cash management, security,
+            and learning Frontend React Developer with experience in building
+            the project management office from scratch, implementing banking
+            products, construction projects, cash management, security,
             e-commerce, web development, mobile applications, etc. Experience in
             negotiating, coordinating issues with public and private
             organizations.
