@@ -6,7 +6,7 @@ function Contact() {
     <section className="contact">
       <h1>Contacts page</h1>
       <div className="container">
-        <Usercard userName="Didi" userAge="55" />
+        {/* <Usercard userName="Didi" userAge="55" /> */}
       </div>
     </section>
   );

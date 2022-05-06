@@ -47,7 +47,7 @@ function About() {
             organizations.
           </p>
           <ul className="about__links">
-            <li className="home__links-item">
+            <li className="about__links-item">
               <a
                 href="https://fb.com"
                 target="_blank"
@@ -56,7 +56,7 @@ function About() {
                 <FaFacebook className="about__icon" />
               </a>
             </li>
-            <li className="home__links-item">
+            <li className="about__links-item">
               <a
                 href="https://github.com"
                 target="_blank"
@@ -65,7 +65,7 @@ function About() {
                 <FaGithub className="about__icon" />
               </a>
             </li>
-            <li className="home__links-item">
+            <li className="about__links-item">
               <a
                 href="https://linkedin.com"
                 target="_blank"

@@ -15,18 +15,21 @@ function Navbar() {
     {
       id: 1,
       menu: "about",
-      link: "1",
+      link: "/",
     },
+    
     {
       id: 2,
-      menu: "services",
-      link: "services",
-    },
-    {
-      id: 3,
       menu: "portfolio",
       link: "portfolio",
     },
+
+    {
+      id: 3,
+      menu: "services",
+      link: "services",
+    },
+
     {
       id: 4,
       menu: "contact",
