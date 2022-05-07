@@ -113,7 +113,17 @@ function Portfolio() {
         </div>
 
         <div className="portfolio__works">
-          <h3>Latest Works</h3>
+          <motion.h3
+            variants={h3Variants}
+            initial={"hidden"}
+            animate={"visible"}
+            transition={{
+              duration: 2,
+              repeat: 1,
+            }}
+          >
+            Latest Works
+          </motion.h3>
           <ul>
             {works.map((work, idx) => (
               <motion.li
@@ -122,7 +132,6 @@ function Portfolio() {
                 animate={"visible"}
                 key={idx}
                 custom={idx}
-               
               >
                 <img src={work.imgUrl} alt="" />
                 <h4>{work.title}</h4>
