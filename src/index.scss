@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,900;1,700&family=Open+Sans:wght@300;400&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,900;1,700&family=Open+Sans:wght@300;400&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 html {
   box-sizing: border-box;
@@ -12,10 +14,10 @@ html {
 
 body {
   margin: 0;
-  font-family: "Lato", sans-serif;
+  font-family: "Poppins", sans-serif;
   // background-color: rgb(221, 205, 181);
   // background-color: #FBFFFF;
-  background-color: #e7ebf0;
+  background-color: #f9fafc;
 }
 
 a {

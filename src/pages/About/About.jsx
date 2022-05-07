@@ -2,7 +2,7 @@ import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { init } from "ityped";
-import Photo from "../../images/photo.jpg";
+import Photo from "../../images/photo1.jpg";
 import "./about.scss";
 
 function About() {
