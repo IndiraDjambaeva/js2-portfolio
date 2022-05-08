@@ -1,5 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import marker from "../../images/marker.svg";
+import L from "leaflet";
 
 import "./contact.scss";
 
@@ -18,12 +21,20 @@ function Contact() {
     reset();
   };
 
+  const position = [42.87815024597669, 74.58760324057229];
+
+  const icon = L.icon({
+    iconUrl: marker,
+    iconAnchor: position,
+    iconSize: [55, 55],
+  });
+
   return (
     <section className="contact">
       <h1>Our Contacts</h1>
       <div className="container contact__container">
         <div className="contact_col">
-          <form onSubmit={handleSubmit(onSubmit())}>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <label>
               Your name
               <input
@@ -38,7 +49,7 @@ function Contact() {
               />
             </label>
             <div className="contact__error">
-              {errors?.name && <p>{errors?.name?.message ||"Error!"}</p>}
+              {errors?.name && <p>{errors?.name?.message || "Error!"}</p>}
             </div>
 
             <label>
@@ -55,7 +66,7 @@ function Contact() {
               />
             </label>
             <div className="contact__error">
-              {errors?.email && <p>{errors?.email?.message ||"Error!"}</p>}
+              {errors?.email && <p>{errors?.email?.message || "Error!"}</p>}
             </div>
 
             <label>
@@ -70,10 +81,19 @@ function Contact() {
               ></textarea>
             </label>
             <div className="contact__error">
-              {errors?.msg && <p>{errors?.msg?.message ||"Error!"}</p>}
+              {errors?.msg && <p>{errors?.msg?.message || "Error!"}</p>}
             </div>
             <input type="submit" disabled={!isValid} />
           </form>
+        </div>
+
+        <div className="contact__col">
+          <MapContainer center={position} zoom={25}>
+            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+            <Marker position={position} icon={icon}>
+              <Popup>Philarmony</Popup>
+            </Marker>
+          </MapContainer>
         </div>
       </div>
     </section>

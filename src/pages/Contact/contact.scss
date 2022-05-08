@@ -69,4 +69,39 @@
     border-radius: 5px;
     padding: 0 15px;
   }
+
+  .leaflet-container {
+    height: 400px;
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .contact {
+    &__container {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    &__col {
+      width: 100%;
+    }
+
+    form {
+      width: 50%;
+    }
+
+    .leaflet-container {
+      height: 400px;
+      width: calc(100vw - 30px);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    form {
+      width: 100%;
+    }
+  }
 }
