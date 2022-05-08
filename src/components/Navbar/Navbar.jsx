@@ -32,6 +32,12 @@ function Navbar() {
 
     {
       id: 4,
+      menu: "blog",
+      link: "blog",
+    },
+
+    {
+      id: 5,
       menu: "contact",
       link: "contact",
     },
